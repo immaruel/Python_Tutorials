@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 연습</title>
+</head>
+<body>
+    <h1>내 사이트 얌</h1>
+    <!-- jquery cdn 받아오기 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- jquery ajax 형식 + 카카오 책검색 api 받아오기 -->
+    <script>
+    $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query="꿈의 해석" },
+        headers: {Authorization: "KakaoAK 5365c84febf5bac56f12fdf8ca4c48a0"},
+      })
+        .done(function( msg ) {
+          alert( "Data Saved: " + msg );
+        });
+    </script>    
+    </body>
+</html>
