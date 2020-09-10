@@ -1,4 +1,4 @@
-`import telepot
+import telepot
 import logging # 로그를 찍어주는 라이브러리
 from module import get_dir_list # module.py에서 get_dir_list라는 함수 사용
 import os
